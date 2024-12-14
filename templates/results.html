@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+</head>
+<body>
+    <h1>Divisão Concluída</h1>
+    <p>Total de páginas divididas: {{ total_pages }}</p>
+    <h2>Arquivos gerados:</h2>
+    <ul>
+        {% for file in files %}
+        <li><a href="{{ url_for('static', filename='uploads/output/' + file) }}" target="_blank">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/">Voltar para o início</a>
+</body>
+</html>
